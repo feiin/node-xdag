@@ -1,0 +1,18 @@
+{
+  "name": "node-xdag",
+  "version": "1.0.0",
+  "description": "communicate with xdag (via unix_sock now)",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "xdag"
+  ],
+  "author": "solar",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^5.0.4",
+    "should": "^13.2.1"
+  }
+}
