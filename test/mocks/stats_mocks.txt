@@ -1,0 +1,9 @@
+Statistics for ours and maximum known parameters:
+            hosts: 320 of 320
+           blocks: 14305483 of 14305483
+      main blocks: 102082 of 102082
+    orphan blocks: 13
+ wait sync blocks: 0
+ chain difficulty: 1d78e64cb3119601e50355a899 of 1d78e64cb3119601e50355a899
+      XDAG supply: 104531968.000000000 of 104531968.000000000
+4 hr hashrate MHs: 0.00 of 14716427.38

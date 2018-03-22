@@ -23,8 +23,9 @@ path of the xdag unix_sock.dat file
 
  - [getBalance](#get_balance)
  - [getBlock](#get_block)
+ - [getStats](#get_stats)
 
- ### <a id="get_balance">getBalance<a>
+ ### <a id="get_balance">getBalance</a>
 
 > get xdag balance
 
@@ -57,7 +58,7 @@ xdag.getBalance("xdagAddress")
         { "direction": "fee",
         "address":"OwFhTJbCdaj1ZqkJYPxrGDjGSvXlGrv7",
         "amount": "0.000000000" }
-        ...
+        
     ],
     "address":[
         { 
@@ -66,12 +67,12 @@ xdag.getBalance("xdagAddress")
             "amount": "0.003222176",
             "time": "2018-02-20 04:58:40.815"
         }
-        ....
+        
     ]
 
 }
 ```
-
+example
 
 ```javascript
 xdag.getBlock('blockAddress')
@@ -81,5 +82,34 @@ xdag.getBlock('blockAddress')
     .catch((err) => {
         console.error(err);
     })
+```
+
+ ### <a id="get_stats">getStats</a>
+
+> get the xdag's stats
+
+**result**
+
+```json
+{ "hosts": "320 of 320",
+  "blocks": "14311273 of 14311295",
+  "main blocks": "102117 of 102117",
+  "orphan blocks": "1",
+  "wait sync blocks": "28",
+  "chain difficulty": "1d79edf0ecb4d2c0e71859df10 of  1d79edf0ecb4d2c0e71859df10",
+  "XDAG supply": "104567808.000000000 of 104567808.000000000",
+  "4 hr hashrate MHs": "0.00 of 6397628.62"
+}
+```
+
+example
+
+```javascript
+xdag.getStats().then((data) => {
+                console.log(data.result);
+            }).catch((err) => {
+
+            })
+
 ```
 
