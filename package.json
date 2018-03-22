@@ -10,6 +10,14 @@
   "keywords": [
     "xdag"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feiin/node-xdag.git"
+  },
+  "bugs": {
+    "url": "https://github.com/feiin/node-xdag/issues"
+  },
+  "homepage": "https://github.com/feiin/node-xdag#readme",
   "author": "solar",
   "license": "MIT",
   "devDependencies": {
