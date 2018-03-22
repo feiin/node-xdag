@@ -4,7 +4,15 @@ node.js communicate with xdag (via unix_sock now)
 [![Build Status](https://travis-ci.org/feiin/node-xdag.svg?branch=master)](https://travis-ci.org/feiin/feiin/node-xdag)
 
 
+
 ## Usage
+
+```shell
+
+> npm install node-xdag --save
+
+```
+
 
 ```node.js
 
@@ -113,3 +121,11 @@ xdag.getStats().then((data) => {
 
 ```
 
+
+## Buiding
+
+```shell
+> git clone  git@github.com:feiin/node-xdag.git
+> npm install
+> npm test
+```
