@@ -129,3 +129,7 @@ xdag.getStats().then((data) => {
 > npm install
 > npm test
 ```
+
+## Maintainers
+
+solar (xdag: 4f1Sp/UD55JX5+kQCevUCpyenaPwqmpC)
