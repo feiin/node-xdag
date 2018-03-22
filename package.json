@@ -8,7 +8,9 @@
     "xdagtest": "make xdagtest"
   },
   "keywords": [
-    "xdag"
+    "xdag",
+    "dag",
+    "blockchain"
   ],
   "repository": {
     "type": "git",
