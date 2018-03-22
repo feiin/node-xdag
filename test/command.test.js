@@ -35,7 +35,10 @@ describe('node-xdag', () => {
     describe('#command(cmd)', function () {
 
         it('should be connect socketfile & send command success', (done) => {
-            var xdag = new XDag(socketFile);
+            var xdag = new XDag({
+                socketFile: socketFile
+            });
+
             xdag.command('world').then((result) => {
                 result.should.equal('hello world');
                 done();

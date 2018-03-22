@@ -1,5 +1,5 @@
 TESTS = $(shell find test -type f -name "*.test.js")
-TEST_TIMEOUT = 5000
+TEST_TIMEOUT = 10000
 MOCHA_REPORTER = spec
 
 test:
@@ -8,5 +8,10 @@ test:
         -r should \
      	--timeout $(TEST_TIMEOUT) \
      	$(TESTS)
-
-.PHONY: test
+xdagtest:
+	@NODE_ENV=production ./node_modules/mocha/bin/mocha \
+     	--reporter $(MOCHA_REPORTER) \
+        -r should \
+     	--timeout $(TEST_TIMEOUT) \
+     	$(TESTS)
+.PHONY: test xdagtest
