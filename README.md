@@ -32,6 +32,7 @@ path of the xdag unix_sock.dat file
  - [getBalance](#get_balance)
  - [getBlock](#get_block)
  - [getStats](#get_stats)
+ - [getLastBlocks](#get_lastblocks)
 
  ### <a id="get_balance">getBalance</a>
 
@@ -121,6 +122,41 @@ xdag.getStats().then((data) => {
 
 ```
 
+ ### <a id="get_lastblocks">getLastBlocks</a>
+
+> get xdag last N blocks
+
+**result**
+
+type: `Arrary`
+
+```json
+[ "o5+zRJy7tVzzZ763+kQHIP5H4RLltZJv",
+  "XsLYI0NJ0mnXWW6ocx3PzUoTk/4d45an",
+  "0MnKSxiXJRPXs3HHBqzeQyqgU0Kv5/Ka",
+  "2rrC3NR7uOT0VZSgXNlEtnB847PsOHnS",
+  "GZ4R4mQLSKeBZwfeUizAi2kZ1jOAfTsV",
+  "koqkXiy6a/RVUXdSCip7kKmmuSF+QkiO",
+  "T4jj427IPx0h6JarVUxaRI+/X8tNdXNu",
+  "2E1KfP8v6o4MVLb1Lkw/FaIBNAcJEZKO",
+  "jM4Kx8AJ3BSP95lEoEC6x6uZ2/x+g3cE",
+  "OJpD1d8P0IIKABo4evFDrjKa66/RDV1n" ]
+```
+
+example
+
+```javascript
+
+            xdag.getLastBlocks(10)
+                .then((data) => {
+                    console.log(data.result);
+                    done();
+                })
+                .catch((err) => {
+                    console.error(err);
+                    done(err);
+                })
+```
 
 ## Buiding
 
