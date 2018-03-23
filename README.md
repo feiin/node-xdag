@@ -33,6 +33,8 @@ path of the xdag unix_sock.dat file
  - [getBlock](#get_block)
  - [getStats](#get_stats)
  - [getLastBlocks](#get_lastblocks)
+ - [getMiners](#get_miners)
+
 
  ### <a id="get_balance">getBalance</a>
 
@@ -158,12 +160,62 @@ example
                 })
 ```
 
-## Buiding
+### <a id="get_miners">getMiners</a>
+
+**params**
+
+minerStatus: `String`, optional, Default: `null`; status: 'active', 'archive', 'free'
+
+
+**result**
+```json
+{ "miners":
+   [ 
+       { "address": "XZomlEkBFTLWYEycxr86zOrDdopONt/r",
+       "status": "active",
+       "ip": "125.71.100.120",
+       "port": "19415",
+       "inBytes": "19232",
+       "outBytes": "14752",
+       "nopaidShares": "294.039915"
+        }],
+  "total": 1 
+  }
+```
+
+example 
+
+```javascript
+
+            xdag.getMiners('active')
+                .then((data) => {
+                    console.log(data.result);
+                })
+                .catch((err) => {
+                    console.error(err);
+                })
+
+```
+
+## Building
 
 ```shell
 > git clone  git@github.com:feiin/node-xdag.git
 > npm install
-> npm test
+
+```
+
+## Testing
+
+```
+> npm test 
+```
+
+test with xdag
+
+
+```
+> npm run xdagtest
 ```
 
 ## Maintainers

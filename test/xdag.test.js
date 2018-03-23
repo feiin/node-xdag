@@ -101,9 +101,25 @@ describe('xdag.js', () => {
         it('should be get last 10 blocks success', (done) => {
             xdag.getLastBlocks(10)
                 .then((data) => {
-                    console.log(data.result);
                     data.should.be.ok();
                     data.result.length.should.be.equal(10);
+                    done();
+                })
+                .catch((err) => {
+                    console.error(err);
+                    done(err);
+                })
+        });
+    })
+
+    describe('#getMiners', () => {
+        it('should be get current miners success', (done) => {
+            xdag.getMiners('active')
+                .then((data) => {
+                    console.log(data.result);
+                    data.result.should.have.property('miners').which.is.an.Array();
+                    data.result.should.have.property('total').which.is.a.Number();
+                    data.should.be.ok();
                     done();
                 })
                 .catch((err) => {
